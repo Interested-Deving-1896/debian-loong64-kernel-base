@@ -1,0 +1,29 @@
+# Ubuntu stonking Kconfig fragments
+# Delta from Debian base: AppArmor mandatory, snap support, Canonical HWE preferences.
+
+# Ubuntu: AppArmor as sole default LSM (SELinux disabled by default)
+CONFIG_SECURITY_APPARMOR=y
+CONFIG_DEFAULT_SECURITY_APPARMOR=y
+CONFIG_SECURITY_SELINUX=n
+
+# Ubuntu snap / squashfs support
+CONFIG_SQUASHFS=y
+CONFIG_SQUASHFS_XZ=y
+CONFIG_SQUASHFS_ZSTD=y
+CONFIG_SQUASHFS_LZ4=y
+
+# Ubuntu HWE: enable newer hardware support
+CONFIG_DRM_AMDGPU=m
+CONFIG_DRM_I915=m
+CONFIG_DRM_NOUVEAU=m
+
+# Ubuntu livepatch support
+CONFIG_LIVEPATCH=y
+
+# Ubuntu FIPS-adjacent: stronger crypto defaults
+CONFIG_CRYPTO_SHA512=y
+CONFIG_CRYPTO_AES_NI_INTEL=m
+
+# Ubuntu systemd (same as Debian but explicit)
+CONFIG_CGROUP_SYSTEMD=y
+CONFIG_UNIFIED_CGROUP_HIERARCHY=y
