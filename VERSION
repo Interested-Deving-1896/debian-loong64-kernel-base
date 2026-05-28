@@ -1,0 +1,6 @@
+kernel_version=6.9
+kernel_tag=v6.9
+kernel_sha=a38297e3fb012ddfa7ce0321a7e5a8daeb1872b6
+tarball_url=https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.9.tar.xz
+arch=loong64
+generated_at=2026-05-28T04:42:05Z
