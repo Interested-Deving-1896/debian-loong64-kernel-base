@@ -1,0 +1,21 @@
+# Devuan ceres Kconfig fragments
+# Delta from Debian base: removes systemd dependencies, enables OpenRC-compatible settings.
+
+# Inherit Debian base (module signing, AppArmor, audit, initramfs)
+# --- systemd cgroup integration disabled ---
+CONFIG_CGROUP_SYSTEMD=n
+
+# OpenRC / sysvinit compatible: keep cgroups but no systemd-specific hierarchy
+CONFIG_CGROUPS=y
+CONFIG_CGROUP_SCHED=y
+CONFIG_MEMCG=y
+CONFIG_BLK_CGROUP=y
+# Unified hierarchy optional for OpenRC
+CONFIG_UNIFIED_CGROUP_HIERARCHY=n
+
+# eudev / mdev compatible
+CONFIG_UEVENT_HELPER=y
+CONFIG_UEVENT_HELPER_PATH=""
+
+# No systemd-boot EFI stub requirement
+CONFIG_EFI_STUB=y
