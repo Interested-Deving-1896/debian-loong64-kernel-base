@@ -1,33 +1,75 @@
+[update-readmes]   Mode: rewrite — migrating to template structure...
 # debian-loong64-kernel-base
 
-Authoritative kernel base for **loong64** across Debian, Devuan, and Ubuntu.
+[![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/debian-loong64-kernel-base)
 
-Pins kernel `v6.9` from [kernel.org](https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.9.tar.xz).
-Devuan and Ubuntu patches live as branches here — they are downstream
-derivatives of Debian, not separate source trees.
+<!-- AI:start:what-it-does -->
+_Description pending._
+<!-- AI:end:what-it-does -->
 
-## Branch structure
+## Architecture
+
+<!-- AI:start:architecture -->
+_Architecture documentation pending._
+<!-- AI:end:architecture -->
+
+## Install
+
+<!-- Add installation instructions here. This section is yours — the AI will not modify it. -->
+
+```bash
+git clone https://github.com/Interested-Deving-1896/debian-loong64-kernel-base.git
+cd debian-loong64-kernel-base
+```
+
+## Usage
+
+<!-- Add usage examples here. This section is yours — the AI will not modify it. -->
+
+## Configuration
+
+<!-- Document configuration options here. This section is yours — the AI will not modify it. -->
+
+## CI
+
+<!-- AI:start:ci -->
+_CI documentation pending._
+<!-- AI:end:ci -->
+
+## Mirror chain
+
+<!-- AI:start:mirror-chain -->
+This repo is maintained in [`Interested-Deving-1896/debian-loong64-kernel-base`](https://github.com/Interested-Deving-1896/debian-loong64-kernel-base) and mirrored through:
 
 ```
-main                          kernel version pin (this branch)
-patchset/debian/trixie        Debian trixie config + patches
-patchset/debian/forky         Debian forky
-patchset/debian/sid           Debian sid (unstable)
-patchset/devuan/excalibur     Devuan excalibur (no-systemd delta)
-patchset/devuan/forky         Devuan forky
-patchset/devuan/ceres         Devuan ceres (unstable)
-patchset/ubuntu/resolute      Ubuntu resolute config + patches
-patchset/ubuntu/stonking      Ubuntu stonking
-patchset/ubuntu/devel         Ubuntu devel
+Interested-Deving-1896/debian-loong64-kernel-base  ──►  OpenOS-Project-OSP/debian-loong64-kernel-base  ──►  OpenOS-Project-Ecosystem-OOC/debian-loong64-kernel-base
 ```
 
-## Consumers
+Changes flow downstream automatically via the hourly mirror chain in
+[`fork-sync-all`](https://github.com/Interested-Deving-1896/fork-sync-all).
+Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-Deving-1896`.
+<!-- AI:end:mirror-chain -->
 
-- [xanmod-unified-kernel](https://github.com/Interested-Deving-1896/xanmod-unified-kernel)
-- [liquorix-unified-kernel](https://github.com/Interested-Deving-1896/liquorix-unified-kernel)
-- [liqxanmod](https://github.com/Interested-Deving-1896/liqxanmod)
+## Contributors
 
-## Updating the kernel version
+<!-- AI:start:contributors -->
+_Contributors pending._
+<!-- AI:end:contributors -->
 
-Edit `VERSION` and `READY` on `main`. Consumers pick up the new version
-on their next build automatically.
+## Origins
+
+<!-- AI:start:origins -->
+_Original project — no upstream fork._
+<!-- AI:end:origins -->
+
+## Resources
+
+<!-- AI:start:resources -->
+_No additional resource files found._
+<!-- AI:end:resources -->
+
+## License
+
+<!-- AI:start:license -->
+<!-- License not detected — add a LICENSE file to this repo. -->
+<!-- AI:end:license -->
